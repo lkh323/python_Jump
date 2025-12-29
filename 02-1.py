@@ -66,6 +66,9 @@ print(a[5:7])  # is
 print(a[12:17])  # short
 print(a[12:]) # short, You need Python
 print(a[::-1])  # nohtyP deen uoY ,trohs oot si efiL
+print(a[19:-7])  # You need
+print(a[:17])  # Life is too short
+print(a[:])  # Life is too short, You need Python
 
 
 
