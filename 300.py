@@ -51,3 +51,36 @@ print(int_num, type(int_num))
 
 #003 문자열
 
+letters = 'python'
+print(letters[0],letters[2])
+
+license_plate = "24가 2210"
+print(license_plate[-4:])
+print(license_plate[4:])
+print(license_plate[:])
+
+string = "홀짝홀짝홀짝"
+print(string[::2])
+
+string = "PYTHON"
+print(string[::-1])
+
+phone_number = "010-1111-2222"
+print(phone_number.replace("-", " "))
+print(phone_number.replace("-", ""))
+
+url = "http://sharebook.kr"
+url_split = url.split(".")
+print(url_split[0])
+print(url_split[1])
+print(url[-2:])
+
+
+lang = 'python'
+lang[0] = 'P'       
+print(lang)
+
+
+string = 'abcdfe2a354a32a'
+string.replace('a','A')
+
