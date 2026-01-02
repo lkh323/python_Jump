@@ -214,30 +214,79 @@ movie_rank.remove("배트맨")
 print(movie_rank)
 
 
+nums = [1, 2, 3, 4, 5, 6, 7]
+print(max(nums))
+print(min(nums))
+
+nums = [1, 2, 3, 4, 5]
+total = 0
+for n in nums :
+    total += n
+print(total)      
 
 
+nums = [1, 2, 3, 4, 5]
+sum(nums)
 
+cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "소시지", "라면", "팥빙수", "김치전"]
+print(len(cook))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nums = [1, 2, 3, 4, 5]
+print(sum(nums)/len(nums))
 
 
 # 061 ~ 070 #######################################################
+
+price = ['20180728', 100, 130, 140, 150, 160, 170]
+print(price[1:])
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(nums[::2])
+print(nums[1::2])
+
+nums = [1, 2, 3, 4, 5]
+print(nums[::-1])
+
+interest = ['삼성전자', 'LG전자', 'Naver']
+print(interest[::2])
+
+interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+print(" ".join(interest))
+print("/".join(interest))
+print("\n".join(interest))
+
+string = "삼성전자/LG전자/Naver"
+print(string.split("/"))
+
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort()
+print(data)
+
+# 리스트 객체 자체의 순서를 바꿉니다. 별도의 메모리를 추가로 사용하지 않아 효율적이지만, 원본 데이터가 사라진다는 점을 유의해야 합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
