@@ -251,6 +251,7 @@ interest = ['삼성전자', 'LG전자', 'Naver']
 print(interest[::2])
 
 interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+print("".join(interest))
 print(" ".join(interest))
 print("/".join(interest))
 print("\n".join(interest))
@@ -264,43 +265,329 @@ print(data)
 
 # 리스트 객체 자체의 순서를 바꿉니다. 별도의 메모리를 추가로 사용하지 않아 효율적이지만, 원본 데이터가 사라진다는 점을 유의해야 합니다.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 071 ~ 080 #######################################################
 
+my_variable = ()
+type(my_variable)
+
+movie_rank = ("닥터 스트레인지", "스플릿", "럭키")
+
+t = (1,)
+
+t = 1, 2, 3, 4
+type(t)
+
+t = ('a', 'b', 'c')
+t = ('A', 'b', 'c')
+
+interest = ['삼성전자', 'LG전자', 'SK Hynix']
+type(interest)
+type(tuple(interest))
+
+
+temp = ('apple', 'banana', 'cake')
+a, b, c = temp
+print(a, b, c)
+
+data = tuple(range(2,99,2))
+type(data)
+print(data)
 
 
 # 081 ~ 090 #######################################################
 
+a, b, *c = (0, 1, 2, 3, 4, 5)
+a
+b
+type(c)
+
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+*a, b, c = scores
+a
+b
+c
+
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, b, *c = scores
+a
+b
+c
+
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+a, *b, c = scores
+a
+b
+c
+
+temp = {}
+type(temp)
+
+data1 = {"메로나":1000,"폴라포":"1200", "빵빠레":1800}
+data2 = {"죠스바":1200,"월드콘":"1500"}
+data1.update(data2)
+
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+
+ice["메로나"]
+ice.get("메로나")
 
 
 # 091 ~ 100 #######################################################
 
 
+ice = {'메로나': [300,20],
+       '비비빅': [400,3],
+       '죠스바': [250,100]}
+
+ice
+ice.get("메로나")[1]
+ice["메로나"][1]
+
+
+inventory = {"메로나": [300, 20],
+              "비비빅": [400, 3],
+              "죠스바": [250, 100]}
+inventory.update({"월드콘": [500, 7]})
+inventory["누가바"] = [1500, 17]
+inventory
+
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+icecream.keys()
+list(icecream.keys())
+
+icecream.values()
+sum(icecream.values())
+
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {'팥빙수':2700, '아맛나':1000}
+
+icecream.update(new_product)
+
+date = ['09/05', '09/06', '09/07', '09/08', '09/09']
+close_price = [10500, 10300, 10100, 10800, 11000]
+
+close_table = list(zip(date,close_price))
+close_table = dict(zip(date,close_price))
+
 
 # 101 ~ 110 #######################################################
+
+print(3 >= 4)
+print(3 <= 4)
+
+if 4 < 3:
+    print("Hello World")
+
+if 4 < 3:
+    print("Hello World.")
+else:
+    print("Hi, there.")
+
+
+if True :
+    print("1")
+    print("2")
+else :
+    print("3")
+print("4")
+
+
+if True :
+    if False:
+        print("1")
+        print("2")
+    else:
+        print("3")
+else :
+    print("4")
+print("5")
+
+
+# 111 ~ 120 #######################################################
+
+a = input("입력 :")
+print(a*2)
+
+a = input("입력 :")
+print(int(a) + 10)
+
+a = input("입력 :")
+if int(a) % 2 == 0 :
+    print("짝수 입니다.")
+else :
+    print("홀수 입니다.")
+
+a = input("입력 :")
+if int(a) <= 255 :
+    int(a) + 20
+else :
+    print(255)
+
+a = input("좋아하는 과일은 ? ")
+fruit = ["사과", "포도", "홍시"]
+if fruit.count(a) > 0:
+   print("정답입니다.") 
+
+
+a = input("좋아하는 과일은 ? ")
+fruit = ["사과", "포도", "홍시"]
+if a in fruit : 
+    print("정답입니다.")
+else :
+    print("오답입니다.")
+
+a = input("투자종목을 입력하세요 ? ")
+warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
+if a in warn_investment_list:
+    print("투자 유의 종목입니다.")
+else:
+    print("투자 유의 종목이 아닙니다.")
+
+
+a = input("제일 좋아하는 계절은 ? ")
+fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
+if a in fruit.values():
+    print("정답")
+else:
+    print("오답")
+
+
+# 121 ~ 130 #######################################################
+
+a = input("문자를 입력하세요")
+if a.isupper() :
+    print(a.lower())
+else:
+    print(a.upper())
+
+
+
+a = input("점수를 입력하세요")
+if 81 <= int(a)  < 100:
+    print("A")
+elif  61 <= int(a)  < 80:
+    print("B")
+elif  41 <= int(a)  < 60:
+    print("C")
+elif  21 <= int(a)  < 40:
+    print("D")
+elif  0 <= int(a)  < 20:
+    print("E")
+
+
+country_money =  input("입력 : ")
+money, country = country_money.split(sep=" ")
+
+if country == "달러":
+    print(1167*int(money))
+elif country == "엔":
+    print(1.096*int(money))
+elif country == "유로":
+    print(1268*int(money))
+elif country == "위안":
+    print(171*int(money))
+
+
+환율 = {"달러": 1167, 
+        "엔": 1.096, 
+        "유로": 1268, 
+        "위안": 171}
+user = input("입력: ")
+num, currency = user.split()
+print(float(num) * 환율[currency], "원")
+
+num1 = input("number 1 : ")
+num2 = input("number 2 : ")
+num3 = input("number 3 : ")
+
+numbers = [num1, num2, num3]
+print(max(numbers))
+
+if num1 >= num2 and num1 >= num3:
+    print(num1)
+elif num2 >= num1 and num2 >= num3:
+    print(num2)
+else:
+    print(num3)
+
+
+phone = input("휴대전화 번호 입력 : ")
+data ={"011":"SKT","016":"KT","019":"LGU","010":"알수없음"}
+a = phone.split("-")
+if a[0] == "011":
+    prnt("SKT")
+elif a[0] == "016":
+    print("KT")
+elif a[0] == "019":
+    print("LGU")
+elif a[0] == "010":
+    print("알수없음.")
+
+
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+opening_price = float(btc.get("opening_price"))
+max_price = float(btc.get("max_price"))
+range_money = float(btc.get("max_price")) - float(btc.get("min_price"))
+
+if (opening_price - range_money) > max_price :
+    print("상승장")
+else :
+    print("하락장")
+
+
+# 131 ~ 140 #######################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 141 ~ 150 #######################################################
+# 151 ~ 160 #######################################################
+# 161 ~ 170 #######################################################
+# 171 ~ 180 #######################################################
+# 181 ~ 190 #######################################################
+# 191 ~ 200 #######################################################
+# 201 ~ 210 #######################################################
+# 211 ~ 220 #######################################################
+# 221 ~ 230 #######################################################
+# 231 ~ 240 #######################################################
+# 241 ~ 250 #######################################################
+# 251 ~ 260 #######################################################
+# 261 ~ 270 #######################################################
+# 271 ~ 280 #######################################################
+# 281 ~ 290 #######################################################
+# 291 ~ 300 #######################################################
+
 
