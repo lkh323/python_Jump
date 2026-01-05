@@ -732,38 +732,175 @@ my_list = ["가", "나", "다", "라"]
 for data in range(3,0,-1):
     print(my_list[data], my_list[data-1])
  
+my_list = ["가", "나", "다", "라", "마"]
+for data in range(0,4):
+    print(my_list[data], my_list[data+1], my_list[data+2])
+ 
 
+my_list = [100, 200, 400, 800]
+for data in range(3):
+    print(my_list[data + 1] - my_list[data])
+ 
+for data in range(0,4):
+    print((my_list[data] + my_list[data+1] + my_list[data+2])/3)
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+low_prices  = [100, 200, 400, 800, 1000]
+high_prices = [150, 300, 430, 880, 1000]
+volatility = []
+for i in range(len(low_prices)) :
+    volatility.append(high_prices[i] - low_prices[i])
 
 # 181 ~ 190 #######################################################
+
+apart = [["101호","102호"], ["201호","202호"], ["301호","302호"]]
+
+stock = [["시가", 100, 200, 300], ["종가", 80, 210, 330]]
+
+stock = {"시가":[100, 200, 300],"종가":[80, 210, 330]}
+
+stock = {"10/10":[80, 110, 70, 90],"10/11":[210, 230, 190, 200]}
+
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for row in apart:
+    for col in row:
+        print(str(col) + "호")
+
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for row in apart[::-1]:
+    for col in row:
+        print(str(col) + "호")
+
+apart = [[101, 102], [201, 202], [301, 302]]
+apart.reverse()
+for i in list(apart):
+    print(str(i[0]) + " 호")
+    print(str(i[1]) + " 호")
+
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for row in apart[::-1]:
+    for col in row[::-1]:
+        print(str(col) + "호")
+
+
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for row in apart:
+    for col in row:
+        print(str(col) + "호")
+        print("-"*5)
+
+apart = [ [101, 102], [201, 202], [301, 302] ]
+for row in apart:
+    for col in row:
+        print(str(col) + "호")
+    print("-"*5)
+
+
 # 191 ~ 200 #######################################################
+
+data = [
+    [ 2000,  3050,  2050,  1980],
+    [ 7500,  2050,  2050,  1980],
+    [15450, 15050, 15550, 14900]
+]
+for row in data:
+    for col in row:
+        print(col*1.00014) 
+    print("-"*5)
+
+
+data = [
+    [ 2000,  3050,  2050,  1980],
+    [ 7500,  2050,  2050,  1980],
+    [15450, 15050, 15550, 14900]
+]
+result = []
+for row in data:
+    for col in row:
+        result.append(col*1.00014) 
+
+data = [
+    [ 2000,  3050,  2050,  1980],
+    [ 7500,  2050,  2050,  1980],
+    [15450, 15050, 15550, 14900]
+]
+result = []
+for row in data:
+    result_sub = []
+    for col in row:
+        result_sub.append(col*1.00014) 
+    result.append(result_sub)
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+for i in ohlc:
+    print(i[1][-1])
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+for i in ohlc[1:]:
+    print(i[-1])
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+for i in ohlc[1:]:
+    if i[-1] > 150 :
+        print(i[-1])
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+for i in ohlc[1:]:
+    if i[3] >= i[0] :
+        print(i[3])
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+volatility = []        
+for i in ohlc[1:]:
+    volatility.append(i[1] - i[2])
+print(volatility)
+
+
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+sum = 0        
+for i in ohlc[1:]:
+    sum += (i[0] - i[3])
+print(sum)    
+
+
 # 201 ~ 210 #######################################################
+
+def print_coin():
+    return "비트코인"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 211 ~ 220 #######################################################
 # 221 ~ 230 #######################################################
 # 231 ~ 240 #######################################################
