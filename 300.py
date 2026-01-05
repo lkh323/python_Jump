@@ -542,41 +542,225 @@ else :
 
 # 131 ~ 140 #######################################################
 
+for 변수 in [10, 20, 30]:
+    print(변수)
+    print("---------")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for 변수 in [10, 20, 30, 40]:
+    print("---------")
 
 # 141 ~ 150 #######################################################
+
+리스트 = [100, 200, 300]
+for data in 리스트 :
+    print(int(data) + 10)
+
+리스트 = ["김밥", "라면", "튀김"]
+for data in 리스트 :
+    print("오늘의 메뉴 " + data)
+
+리스트 = ["SK하이닉스", "삼성전자", "LG전자"]
+for data in 리스트 :
+    print(len(data))
+
+리스트 = ['dog', 'cat', 'parrot']
+for data in 리스트 :
+    print(data, str(len(data)))
+
+리스트 = ['dog', 'cat', 'parrot']
+for data in 리스트 :
+    print(data[0])
+    
+리스트 = [1, 2, 3]
+for data in 리스트 :
+    # print("3 * %s " % data)
+    # print(f"3 * {data}")
+    print("3 * {} = {}".format(data, data *3))
+
+
+리스트 = ["가", "나", "다", "라"]
+n = 0
+for data in 리스트 :
+    n += 1 
+    if n > 1 :
+        print(data)
+
+리스트 = ["가", "나", "다", "라"]
+리스트 = 리스트[1:]
+for data in 리스트 :
+    print(data)
+
+리스트 = ["가", "나", "다", "라"]
+for data in 리스트[1:] :
+    print(data)
+
+리스트 = ["가", "나", "다", "라"]
+for data in 리스트[0::2] :
+    print(data)
+
+리스트 = ["가", "나", "다", "라"]
+for data in 리스트[::-1] :
+    print(data)
+
+
 # 151 ~ 160 #######################################################
+
+리스트 = [3, -20, -3, 44]
+for data in 리스트 :
+    if data < 0 :
+        print(data)
+
+
+리스트 = [3, 100, 23, 44]
+for data in 리스트 :
+    if data % 3 == 0 :
+        print(data)
+
+리스트 = [13, 21, 12, 14, 30, 18]
+for data in 리스트 :
+    if data % 3 == 0 and data < 20:
+        print(data)
+
+
+리스트 = ["I", "study", "python", "language", "!"]
+for data in 리스트 :
+    if len(data) > 3 :
+        print(data)
+
+
+리스트 = ["A", "b", "c", "D"]
+for data in 리스트 :
+    if data.isupper() :
+        print(data)
+
+리스트 = ["A", "b", "c", "D"]
+for data in 리스트 :
+    if data.islower() :
+        print(data)
+
+리스트 = ['dog', 'cat', 'parrot']
+for data in 리스트 :
+    print(data.capitalize())
+
+리스트 = ['hello.py', 'ex01.py', 'intro.hwp']
+for data in 리스트 :
+    print(data.split(".")[0])
+
+리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+for data in 리스트 :
+    if data.endswith(("h","c")) :
+        print(data)
+
+
 # 161 ~ 170 #######################################################
+
+for data in range(2002, 2051, 4):
+    print(data, end = " ")
+
+for data in range(1, 31):
+    if data % 3 == 0 :
+        print(data, end = " ")
+
+for data in range(1, 31, 3):
+    print(data, end = " ")
+
+
+for data in range(99, -1, -1):
+    print(data, end = " ")
+
+for data in range(100):
+    print(99 - data, end = " ")
+
+for data in range(10):
+    print(data * 0.1)
+
+for data in range(10):
+    print(f"3 * {data} =", 3*int(data))
+
+hap = 0
+for data in range(1,11):
+    hap = hap + data
+print(hap)
+
+
+hap = 0
+for data in range(1,11,2):
+    hap = hap + data
+print(hap)
+
+
+gop = 1
+for data in range(1,11):
+    gop = gop * data
+print(format(gop,","))
+print(f"{gop:,}")
+
+
 # 171 ~ 180 #######################################################
+
+price_list = [32100, 32150, 32000, 32500]
+for data in price_list:
+    print(data)
+
+price_list = [32100, 32150, 32000, 32500]
+for data in range(4):
+    print(price_list[data])
+
+price_list = [32100, 32150, 32000, 32500]
+i = len(price_list) - 1
+for data in range(4):
+    print(i - data, price_list[data])
+    # print(price_list[data])
+    # print(price_list[data])
+
+
+price_list = [32100, 32150, 32000, 32500]
+for data in range(1,4):
+    print(100 + 10*(data-1), price_list[data])
+
+price_list = [32100, 32150, 32000, 32500]
+for data in range(1,4):
+    print(90 + 10*data, price_list[data])
+
+my_list = ["가", "나", "다", "라"]
+for data in range(0,3):
+    print(my_list[data], my_list[data+1])
+ 
+
+my_list = ["가", "나", "다", "라"]
+for data in range(3,0,-1):
+    print(my_list[data], my_list[data-1])
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 181 ~ 190 #######################################################
 # 191 ~ 200 #######################################################
 # 201 ~ 210 #######################################################
