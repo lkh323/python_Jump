@@ -971,12 +971,79 @@ def print_even(list):
 print_even([1, 3, 2, 10, 12, 11, 15])
 
 
+def print_keys(dict):
+    for keys in dict.keys():
+        print(keys)
+
+print_keys({"이름":"김말똥", "나이":30, "성별":0})
 
 
+def print_value_by_key(dict, day):
+    print(dict[day])
+
+my_dict = {"10/26" : [100, 130, 100, 100],
+           "10/27" : [10, 12, 10, 11]}
+
+print_value_by_key(my_dict, "10/26")
+
+def print_5xn(str):
+    print(str[0:5])
+    print(str[5:])
+    
+def print_5xn(str):
+    i_pre = 0
+    for i in range(len(str)+1):
+        if i % 5 == 0 and i_pre == 0:
+            print(str[:i])
+            i_pre = i 
+        elif i % 5 == 0 and i_pre > 0:
+            print(str[i_pre:i])
+            i_pre = i    
+
+def print_5xn(line):
+    chunk_num = int(len(line) / 5)
+    for x in range(chunk_num + 1) :
+        print(line[x * 5: x * 5 + 5])
+
+
+print_5xn("아이엠어보이유알어걸아이엠어보이유알어걸")
+
+# 아이엠어보
+# 이유알어걸
+
+def printmxn(line, n):
+    chunk_num = int(len(line) / n)
+    for x in range(chunk_num + 1) :
+        print(line[x * n: x * n + n])
+
+printmxn("아이엠어보이유알어걸", 3)
+
+
+def printmxn(string, n):
+    for i in range(0, len(string), n):
+        print(string[i:i+n])
 
 
 # 231 ~ 240 #######################################################
+
+def convert_int(str):
+    return int(str.replace(",",""))
+
+convert_int("1,234,567")
+
+
 # 241 ~ 250 #######################################################
+
+import datetime
+
+now = datetime.datetime.now()
+print(now)
+
+
+
+
+
+
 # 251 ~ 260 #######################################################
 # 261 ~ 270 #######################################################
 # 271 ~ 280 #######################################################
