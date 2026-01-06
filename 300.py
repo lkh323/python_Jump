@@ -886,23 +886,95 @@ print(sum)
 def print_coin():
     return "비트코인"
 
+print_coin()
+
+for i in range(100):
+    print_coin()
 
 
-
-
-
-
-
-
-
-
-
-
-
+def print_coin():
+    for i in range(100):
+        print_coin()    
 
 
 # 211 ~ 220 #######################################################
+
+def print_with_smile(a):
+    print(a , ":D")
+
+print_with_smile("Hi")    
+
+
+def print_upper_price(num):
+    print(int(num)*1.3)
+
+print_upper_price(1000)
+
+
+def print_sum(num1, num2):
+    print(num1 + num2)
+
+print_sum(100, 200)
+
+
+def print_arithmetic_operation(num1, num2):
+    print(num1 + num2)
+    print(num1 - num2)
+    print(num1 * num2)
+    print(num1 / num2)
+
+print_arithmetic_operation(40, 10)
+
+def print_max(a, b, c):
+    max_val = 0
+    if a > max_val:
+        max_val = a
+    if b > max_val:
+        max_val = b
+    if c > max_val:
+        max_val = c
+    print(max_val)
+
+print_max(1,2,3)
+print_max(3,2,1)
+print_max(2,3,1)
+
+
 # 221 ~ 230 #######################################################
+
+def print_reverse(str):
+    print(str[::-1])
+
+print_reverse("python")    
+
+
+def print_score(list):
+    sum = 0
+    for data in list:
+        sum += data
+    print(sum / len(list))
+
+print_score([1,2,3])
+
+
+def print_score(list):
+    print(sum(list) / len(list))
+
+print_score([1,2,3])
+
+
+def print_even(list):
+    for data in list:
+        if data % 2 == 0:
+            print(data)
+
+print_even([1, 3, 2, 10, 12, 11, 15])
+
+
+
+
+
+
 # 231 ~ 240 #######################################################
 # 241 ~ 250 #######################################################
 # 251 ~ 260 #######################################################
