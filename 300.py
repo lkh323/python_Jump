@@ -1043,32 +1043,197 @@ print(now)
 # 251 ~ 260 #######################################################
 
 class Human:
-    pass
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
 
-areum = Human()
+    def __del__(self):
+        print("클래스 소멸")
+    
+    def who(self):
+         print(f"이름 : {self.name}   나이: {self.age}   성별 : {self.sex}")
+        #  print("이름 : {}   나이: {}   성별 : {}".format(self.name, self.age, self.sex))
+        
+    def setInfo(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+    
+        
+areum = Human("아름",25,"여자")
+areum.who()
 
 
-class Human2:
-    pass
+areum = Human("모름", 0, "모름")
+areum.setInfo("아름", 25, "여자")
+
+del(areum)
 
 
 
+class OMG :
+    def print(self) :
+        print("Oh my god")
 
 
+mystock = OMG()
+mystock.print()      # OMG.print(mystock)
 
-
-
-
-
-
-
-
-
-
+OMG.print(mystock)
 
 
 # 261 ~ 270 #######################################################
+
+class Stock:
+    def __init__(self, name, code, per, pbr, profit):
+        self.name = name
+        self.code = code
+        self.per = per
+        self.pbr = pbr
+        self.profit = profit
+
+    def set_name(self, name):
+        self.name = name
+
+    def set_code(self, code):
+        self.code = code
+
+    def set_per(self, per):
+        self.code = per
+
+    def set_pbr(self, pbr):
+        self.pbr = pbr
+
+
+a = Stock(None, None)
+a.set_name("삼성전자")
+print(a.name)
+
+a.set_code("999999")
+print(a.code)
+
+name = a.get_name()
+print(name)
+
+code = a.get_code()
+print(code)
+
+
+삼성 = Stock("삼성전자", "005930", 15.79, 1.33, 2.83)
+print(삼성.profit)
+
+
 # 271 ~ 280 #######################################################
+
+
+import random
+
+class Account:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+        self.bank = "SC은행"
+        num1 = random.randint(0, 999)
+        num2 = random.randint(0, 99)
+        num3 = random.randint(0, 999999)
+
+        num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
+        num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
+        num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
+        self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
+
+
+
+kim = Account("김민수", 100)
+print(kim.name)
+print(kim.balance)
+print(kim.bank)
+print(kim.account_number)
+
+
+
+ 정답확인
+
+import random
+
+class Account:
+    # class variable
+    account_count = 0
+
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+        self.bank = "SC은행"
+
+        # 3-2-6
+        num1 = random.randint(0, 999)
+        num2 = random.randint(0, 99)
+        num3 = random.randint(0, 999999)
+
+        num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
+        num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
+        num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
+        self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
+        Account.account_count +=1
+
+    @classmethod
+    def get_account_num(cls):
+        print(cls.account_count)     # Account.account_count
+
+
+kim = Account("김민수", 100)
+lee = Account("이민수", 100)
+kim.get_account_num()
+
+
+import random
+
+class Account:
+    # class variable
+    account_count = 0
+
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+        self.bank = "SC은행"
+
+        # 3-2-6
+        num1 = random.randint(0, 999)
+        num2 = random.randint(0, 99)
+        num3 = random.randint(0, 999999)
+
+        num1 = str(num1).zfill(3)      # 1 -> '1' -> '001'
+        num2 = str(num2).zfill(2)      # 1 -> '1' -> '01'
+        num3 = str(num3).zfill(6)      # 1 -> '1' -> '0000001'
+        self.account_number = num1 + '-' + num2 + '-' + num3  # 001-01-000001
+        Account.account_count +=1
+
+    @classmethod
+    def get_account_num(cls):
+        print(cls.account_count)     # Account.account_count
+
+
+kim = Account("김민수", 100)
+lee = Account("이민수", 100)
+kim.get_account_num()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 281 ~ 290 #######################################################
 # 291 ~ 300 #######################################################
 
