@@ -1048,8 +1048,8 @@ class Human:
 areum = Human()
 
 
-
-
+class Human2:
+    pass
 
 
 
