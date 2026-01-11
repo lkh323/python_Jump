@@ -1192,6 +1192,8 @@ import random
 class Account:
     # class variable
     account_count = 0
+    deposit_history_print = []
+
 
     def __init__(self, name, balance):
         self.name = name
@@ -1210,31 +1212,98 @@ class Account:
         Account.account_count +=1
 
     @classmethod
-    def get_account_num(cls):
-        print(cls.account_count)     # Account.account_count
+    def get_account_num(abc):
+        print(abc.account_count)     # Account.account_count
+
+    def deposit(self, amount):
+        if amount > 1:
+            self.balance += amount
+            Account.account_count +=1
+            if Account.account_count == 5:
+                self.balance = self.balance*1.01 
+            Account.deposit_history_print.append(amount)
+            
+
+    def withdraw(self, amount):
+        if amount < self.balance:
+            self.balance -= amount
+
+    def display_info(self):
+        print("은행 : " + self.bank)
+        print("예금주 : " + self.name)
+        print("계좌번호 : " + self.account_number)
+        print("잔고: ", format(int(self.balance), ","))
+
+    def deposit_history(self):
+        for i in Account.deposit_history_print:
+            print(i)
+
+# 은행이름: SC은행
+# 예금주: 파이썬
+# 계좌번호: 111-11-111111
+# 잔고: 10,000원
+
+
+kim = Account("김민수", 100)
+
+kim.deposit(340)
+print(kim.account_count)
+print(kim.balance)
+
+kim.deposit_history()
+
+
+lee = Account("이민수", 100)
+
+kim.get_account_num()
+
+
+kim = Account("이민수", 1000000)
+kim.display_info()
+
+
+print(format(int("1000000"),","))
 
 
 kim = Account("김민수", 100)
 lee = Account("이민수", 100)
-kim.get_account_num()
+lim = Account("임민수", 100)
 
+acount = [kim, lee, lim]
 
+data = []
+k = Account("KIM", 10000000)
+l = Account("LEE", 10000)
+p = Account("PARK", 10000)
 
+data.append(k)
+data.append(l)
+data.append(p)
 
-
-
-
-
-
-
-
-
-
-
-
-
+for i in data:
+    if i.balance > 1000000:
+        i.display_info()
 
 # 281 ~ 290 #######################################################
+
+class 차:
+    def __init__(self, 바퀴, 가격):
+        self.바퀴 = 바퀴
+        self.가격 = 가격
+
+car = 차(2, 1000)
+car.바퀴
+car.가격
+
+class 자전차(차):
+    pass
+
+bicycle = 자전차(2, 100)
+bicycle.바퀴
+bicycle.가격
+
+
+
 # 291 ~ 300 #######################################################
 
 
