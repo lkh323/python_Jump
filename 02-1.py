@@ -1,7 +1,7 @@
 a = 123
 print(type(a))  # <class 'int'>
 
-a = 4.24E10
+a = 4.24e10
 print(type(a))  # <class 'float'>
 print(a)  # 42400000000.0
 
@@ -22,7 +22,7 @@ print(a * b)  # 36
 print(a / b)  # 2.25
 print(a // b)  # 2  몫
 print(a % b)  # 1 나머지
-print(a ** b)  # 6561
+print(a**b)  # 6561
 print(pow(a, b))  # 6561
 print(abs(-a))  # 9
 
@@ -32,10 +32,10 @@ b = "a"
 c = "123"
 
 "Hello World"
-"Hello \"World\""
-'Python is fun'
+'Hello "World"'
+"Python is fun"
 """Life is too short, You need python"""
-'''Life is too short, You need python'''
+"""Life is too short, You need python"""
 
 
 multiline = "Life is too short\nYou need python"
@@ -49,7 +49,6 @@ print(head * 2)  # PythonPython
 print(tail * 3)  #  is fun! is fun! is fun!
 
 
-
 print("=" * 50)
 print("My Program")
 print("=" * 50)
@@ -59,17 +58,13 @@ a = "Life is too short, You need Python"
 print(len(a))  # 35
 print(a[0])  # L
 print(a[12])  # s
-print(a[-1])  # n   
+print(a[-1])  # n
 print(a[-0])  # L
 print(a[0:4])  # Life
 print(a[5:7])  # is
 print(a[12:17])  # short
-print(a[12:]) # short, You need Python
+print(a[12:])  # short, You need Python
 print(a[::-1])  # nohtyP deen uoY ,trohs oot si efiL
 print(a[19:-7])  # You need
 print(a[:17])  # Life is too short
 print(a[:])  # Life is too short, You need Python
-
-
-
-

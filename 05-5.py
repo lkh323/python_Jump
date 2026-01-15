@@ -1,35 +1,41 @@
 dir([1, 2, 3])
 
-dir({'1':'a'})
+dir({"1": "a"})
 
 divmod(7, 3)
 
 
-for i, name in ['body', 'foo', 'bar']:
-     print(i, name)
+for i, name in ["body", "foo", "bar"]:
+    print(i, name)
 
 
-for i, name in enumerate(['body', 'foo', 'bar']):
-     print(i, name)
+for i, name in enumerate(["body", "foo", "bar"]):
+    print(i, name)
+
+for i, name in enumerate("invako"):
+    print(i, name)
+
+for i, name in enumerate((1, 2, 3, 4, 5)):
+    print(i, name)
 
 
-eval('1+2')     
+eval("1+2")
 
 
-
-def positive(l): 
-    result = [] 
-    for i in l: 
-        if i > 0: 
-            result.append(i) 
+def positive(l):
+    result = []
+    for i in l:
+        if i > 0:
+            result.append(i)
     return result
 
-print(positive([1,-3,2,0,-5,6]))
 
+print(positive([1, -3, 2, 0, -5, 6]))
 
 
 def positive(x):
     return x > 0
+
 
 print(list(filter(positive, [1, -3, 2, 0, -5, 6])))
 
@@ -38,6 +44,7 @@ list(filter(lambda x: x > 0, [1, -3, 2, 0, -5, 6]))
 
 class Person:
     pass
+
 
 a = Person()
 
@@ -55,14 +62,14 @@ for i in "12345":
     print(f"{i}번 센서 장치")
 
 
-ord('a')
+ord("a")
 
 
-sorted([3, 1, 2],reverse=True)
+sorted([3, 1, 2], reverse=True)
 
 print([3, 1, 2].sort())
 
-a = [3,1,2]
+a = [3, 1, 2]
 a.sort
 print(a)
 
